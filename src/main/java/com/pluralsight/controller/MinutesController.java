@@ -32,7 +32,8 @@ public class MinutesController {
 	}
 	
 	@RequestMapping(value = "/addMinutes",  method = RequestMethod.POST)
-	public String addMinutes(@Valid @ModelAttribute ("exercise") Exercise exercise, HttpSession session, BindingResult result) {
+	public String addMinutes(@Valid @ModelAttribute ("exercise") Exercise exercise, 
+			HttpSession session, BindingResult result) {
 		
 		System.out.println("exercise: " + exercise.getMinutes());
 		System.out.println("exercise activity: " + exercise.getActivity());
